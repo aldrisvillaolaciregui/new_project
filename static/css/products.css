@@ -1,0 +1,41 @@
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 50px;
+}
+
+.contenido button {
+  width: auto;
+  align-self: flex-start;
+  margin-left: 2%;
+}
+
+.upload-file{
+  width: auto;
+  align-self: flex-start;
+  margin-left: 2%;
+
+}
+
+.add-product-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.box{
+  background:white;
+  width:300px;
+  border-radius:6px;
+  margin: 0 auto 0 auto;
+  padding:0px 0px 70px 0px;
+  border: #2980b9 4px solid; 
+}

@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block user %}
+{% if nameuser %}
+<h4>{{nameuser}}</h4>
+{% endif %}
+{% endblock user%}
+
+
+{% block content  %}
+<main>
+    <div class="cards">
+      <div class="card-single">
+        <div>
+            {% if cantidad_user %}
+            <h1>{{cantidad_user}}</h1>
+            {% endif %}
+          
+          <span>Users</span>
+        </div>
+        <div>
+          <span class="fas fa-users"></span>
+        </div>
+      </div>
+      <div class="card-single">
+        <div>
+        
+          {% if cantidad %}
+          <h1>{{cantidad}}</h1>
+         
+          {% endif %}
+          <span>Products</span>
+         
+        </div>
+        <div>
+          <span class="fas fa-clipboard-list"></span>
+        </div>
+      </div>
+      <div class="card-single">
+        <div>
+          <h1>15</h1>
+          <span>Orders</span>
+        </div>
+        <div>
+          <span class="fas fa-shopping-cart"></span>
+        </div>
+      </div>
+      <div class="card-single">
+        <div>
+          <h1>$50K</h1>
+          <span>Income</span>
+        </div>
+        <div>
+          <span class="fas fa-wallet"></span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+{% endblock content  %}
+
+

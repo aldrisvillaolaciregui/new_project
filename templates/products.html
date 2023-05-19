@@ -1,0 +1,68 @@
+
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/products.css">
+
+
+<div class="contenido">
+    <h2>Productos</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="excel_file">
+        <button type="submit">Enviar</button>
+      </form>
+
+    <button id="add-product-button" class="btn btn-success">+Add Product</button>
+
+    <div class="add-product-form">
+        <div class="box">
+            <h3>Add Product</h3>
+            <form id="product-form">
+            <!-- Campos del formulario -->
+            <label for="product-name">Product Name:</label>
+            <input type="text" class="form-control" id="product-name" name="product-name"><br>
+
+            <label for="product-price">Product Price:</label>
+            <input type="number" class="form-control" id="product-price" name="product-price"><br>
+
+            <button type="submit " class="btn btn-success" id="save-button">Save</button>
+            <button type="button" class="btn btn-danger" id="cancel-button">Cancel</button>
+        </form>
+
+
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    const addProductButton = document.getElementById('add-product-button');
+    const addProductForm = document.querySelector('.add-product-form');
+    const productForm = document.getElementById('product-form');
+    const cancelButton = document.getElementById('cancel-button');
+
+    addProductButton.addEventListener('click', () => {
+        addProductForm.style.display = 'block';
+    });
+
+    productForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const productName = document.getElementById('product-name').value;
+        const productPrice = document.getElementById('product-price').value;
+
+        // Aquí puedes realizar la llamada al backend para enviar los datos
+
+        addProductForm.style.display = 'none';
+    });
+
+    cancelButton.addEventListener('click', () => {
+        addProductForm.style.display = 'none';
+    });
+</script>
+
+
+{% endblock content %}
